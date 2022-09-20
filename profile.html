@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========== Fontawesome ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ========== Utilities ========== -->
+    <link rel="stylesheet" href="assets/css/utilities.css" type="text/css">
+
+    <!-- ========== Stylesheet ========== -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <!-- ========== jQuery ========== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Profile</title>
+</head>
+<body>
+    <!-- ========== Sidebar ========== -->
+    <aside class="sidebar">
+        <div class="btn-close"><i class="fa-solid fa-xmark"></i></div>
+
+        <div class="profile py-30-20 flex flex-col">
+            <img src="assets/images/avatar03.png" alt="" class="avatar">
+            <h2 class="name lg">nasr aldaya</h2>
+            <p class="status md">student</p>
+            <a href="profile.html" class="btn btn-brand">view profile</a>
+        </div>
+
+        <nav class="navbar flex flex-col">
+            <a href="index.html" class="nav-link">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                <i class="fa-solid fa-question"></i> about
+            </a>
+
+            <a href="courses.html" class="nav-link">
+                <i class="fa-solid fa-graduation-cap"></i> Courses
+            </a>
+
+            <a href="teachers.html" class="nav-link">
+                <i class="fa-solid fa-chalkboard-user"></i> Teachers
+            </a>
+
+            <a href="contact.html" class="nav-link">
+                <i class="fa-solid fa-headset"></i> Contact us
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- ========== Header ========== -->
+    <header class="main-header">
+        <div class="container flex">
+            <a href="index.html" class="logo xlg">Educa.</a>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search Courses...">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+
+            <div class="user-action flex">
+                <div class="icon-box lg" id="menu-icon">
+                    <i class="fa-solid fa-bars icon"></i>
+                </div>
+
+                <div class="icon-box lg" id="search-icon">
+                    <i class="fa-solid fa-magnifying-glass icon"></i>
+                </div>
+
+                <div class="icon-box lg" id="user-btn">
+                    <i class="fa-solid fa-user icon"></i>
+                </div>
+
+                <div class="icon-box lg" id="mode-btn">
+                    <i class="fa-solid fa-sun icon"></i>
+                </div>
+            </div>
+            
+            <div class="profile py-30-20 flex flex-col">
+                <img src="assets/images/avatar03.png" alt="" class="avatar">
+                <h2 class="name lg">nasr aldaya</h2>
+                <p class="status md">student</p>
+                <a href="profile.html" class="btn btn-brand">view profile</a>
+                <div class="profile-buttons flex">
+                    <a href="login.html" class="btn btn-orange">Login</a>
+                    <a href="register.html" class="btn btn-orange">Register</a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== Profile ========== -->
+    <section class="student-profile">
+        <div class="container">
+            <h2 class="main-title">Your Profile</h2>
+
+            <div class="profile-info py-20">
+                <div class="profile py-30-20 flex flex-col">
+                    <img src="assets/images/avatar03.png" alt="" class="avatar">
+                    <h2 class="name lg">nasr aldaya</h2>
+                    <p class="status md">student</p>
+                    <a href="update.html" class="btn btn-brand">update profile</a>
+                </div>
+
+                <div class="box-container">
+                    <div class="box py-20">
+                        <div class="flex">
+                            <div class="icon-box lg">
+                                <i class="fa-solid fa-bookmark"></i>
+                            </div>
+
+                            <div>
+                                <h3 class="num">4</h3>
+                                <p class="desc md">saved playlist</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-brand">view playlists</a>
+                    </div>
+
+                    <div class="box py-20">
+                        <div class="flex">
+                            <div class="icon-box lg">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+
+                            <div>
+                                <h3 class="num">33</h3>
+                                <p class="desc md">videos liked</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-brand">view liked</a>
+                    </div>
+
+                    <div class="box py-20">
+                        <div class="flex">
+                            <div class="icon-box lg">
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+
+                            <div>
+                                <h3 class="num">12</h3>
+                                <p class="desc md">videos comments</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-brand">view comments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <p class="copyright md">© copyright @ 2022 by <span>Nasr Aldaya</span> | all rights reserved!</p>
+        </div>
+    </footer>
+
+    <!-- ========== JS ========== -->
+    <script src="assets/js/main.js" type="text/javascript"></script>
+</body>
+</html>

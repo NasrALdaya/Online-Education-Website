@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========== Fontawesome ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ========== Utilities ========== -->
+    <link rel="stylesheet" href="assets/css/utilities.css" type="text/css">
+
+    <!-- ========== Stylesheet ========== -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <!-- ========== jQuery ========== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Watch</title>
+</head>
+<body>
+    <!-- ========== Sidebar ========== -->
+    <aside class="sidebar">
+        <div class="btn-close"><i class="fa-solid fa-xmark"></i></div>
+
+        <div class="profile py-30-20 flex flex-col">
+            <img src="assets/images/avatar03.png" alt="" class="avatar">
+            <h2 class="name lg">nasr aldaya</h2>
+            <p class="status md">student</p>
+            <a href="profile.html" class="btn btn-brand">view profile</a>
+        </div>
+
+        <nav class="navbar flex flex-col">
+            <a href="index.html" class="nav-link">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                <i class="fa-solid fa-question"></i> about
+            </a>
+
+            <a href="courses.html" class="nav-link">
+                <i class="fa-solid fa-graduation-cap"></i> Courses
+            </a>
+
+            <a href="teachers.html" class="nav-link">
+                <i class="fa-solid fa-chalkboard-user"></i> Teachers
+            </a>
+
+            <a href="contact.html" class="nav-link">
+                <i class="fa-solid fa-headset"></i> Contact us
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- ========== Header ========== -->
+    <header class="main-header">
+        <div class="container flex">
+            <a href="index.html" class="logo xlg">Educa.</a>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search Courses...">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+
+            <div class="user-action flex">
+                <div class="icon-box lg" id="menu-icon">
+                    <i class="fa-solid fa-bars icon"></i>
+                </div>
+
+                <div class="icon-box lg" id="search-icon">
+                    <i class="fa-solid fa-magnifying-glass icon"></i>
+                </div>
+
+                <div class="icon-box lg" id="user-btn">
+                    <i class="fa-solid fa-user icon"></i>
+                </div>
+
+                <div class="icon-box lg" id="mode-btn">
+                    <i class="fa-solid fa-sun icon"></i>
+                </div>
+            </div>
+            
+            <div class="profile py-30-20 flex flex-col">
+                <img src="assets/images/avatar03.png" alt="" class="avatar">
+                <h2 class="name lg">nasr aldaya</h2>
+                <p class="status md">student</p>
+                <a href="profile.html" class="btn btn-brand">view profile</a>
+                <div class="profile-buttons flex">
+                    <a href="login.html" class="btn btn-orange">Login</a>
+                    <a href="register.html" class="btn btn-orange">Register</a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== Footer ========== -->
+    <section class="watch-video">
+        <div class="container row">
+            <div class="video-box py-20">
+                <video src="assets/videos/vid-1.mp4" controls poster="assets/images/posts/post-1-1.png"></video>
+
+                <h3 class="video-title lg">complete HTML tutorial (part 01)</h3>
+
+                <div class="video-info flex">
+                    <div>
+                        <i class="fa-solid fa-calendar"></i> 22-10-2022
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-heart"></i> 44 likes
+                    </div>
+                </div>
+
+                <div class="playlist-info">
+                    <div class="teacher-info flex">
+                        <img src="assets/images/teachers/pic-2.jpg" alt="">
+
+                        <div>
+                            <h3 class="name md">john deo</h3>
+                            <p class="date sm">developer</p>
+                        </div>
+                    </div>
+
+                    <div class="buttons flex">
+                        <a href="playlist.html" class="btn btn-brand">view playlist</a>
+                        <a href="#" class="btn likes"><i class="fa-regular fa-heart"></i>like</a>
+                    </div>
+
+                    <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Itaque labore ratione, hic exercitationem mollitia obcaecati culpa dolor placeat 
+                        provident porro. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid iure 
+                        autem non fugit sint. A, sequi rerum architecto dolor fugiat illo, iure velit nihil 
+                        laboriosam cupiditate voluptatum facere cumque nemo!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Add Comment ========== -->
+    <section class="add-comment">
+        <div class="container">
+            <h2 class="main-title">5 Comments</h2>
+
+            <form class="form comment-box py-20">
+                <textarea name="comment" class="input message" placeholder="enter your comment..." required></textarea>
+
+                <button class="btn btn-brand form-btn" type="submit">add comment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== User Comments ========== -->
+    <section class="user-comment">
+        <div class="container">
+            <h2 class="main-title">User Comments</h2>
+
+            <div class="py-20 comments-container">
+                <div class="box">
+                    <div class="teacher-info flex">
+                        <img src="assets/images/avatar03.png" alt="">
+                        <div>
+                            <h3 class="name md">Nasr Aldaya</h3>
+                            <p class="date sm">21-10-2022</p>
+                        </div>
+                    </div>
+
+                    <div class="comment-content">
+                        <p class="md">this is a comment form nasr aldaya</p>
+                    </div>
+
+                    <div class="buttons flex">
+                        <a href="#" class="btn btn-orange">edit comment</a>
+                        <a href="#" class="btn btn-red">delete comment</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="teacher-info flex">
+                        <img src="assets/images/teachers/pic-2.jpg" alt="">
+                        <div>
+                            <h3 class="name md">john deo</h3>
+                            <p class="date sm">21-10-2022</p>
+                        </div>
+                    </div>
+
+                    <div class="comment-content">
+                        <p class="md">awesome tutorial! <br>
+                            keep going!</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="teacher-info flex">
+                        <img src="assets/images/teachers/pic-3.jpg" alt="">
+                        <div>
+                            <h3 class="name md">john deo</h3>
+                            <p class="date sm">21-10-2022</p>
+                        </div>
+                    </div>
+
+                    <div class="comment-content">
+                        <p class="md">amazing way of teaching! <br>
+                            thank you so much!</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="teacher-info flex">
+                        <img src="assets/images/teachers/pic-4.jpg" alt="">
+                        <div>
+                            <h3 class="name md">john deo</h3>
+                            <p class="date sm">21-10-2022</p>
+                        </div>
+                    </div>
+
+                    <div class="comment-content">
+                        <p class="md">loved it, thanks for the tutorial!</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="teacher-info flex">
+                        <img src="assets/images/teachers/pic-5.jpg" alt="">
+                        <div>
+                            <h3 class="name md">john deo</h3>
+                            <p class="date sm">21-10-2022</p>
+                        </div>
+                    </div>
+
+                    <div class="comment-content">
+                        <p class="md">this is what I have been looking for! thank you so much!</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="teacher-info flex">
+                        <img src="assets/images/teachers/pic-6.jpg" alt="">
+                        <div>
+                            <h3 class="name md">john deo</h3>
+                            <p class="date sm">21-10-2022</p>
+                        </div>
+                    </div>
+
+                    <div class="comment-content">
+                        <p class="md">thanks for the tutorial!
+                            <br>
+                            <br>
+                            how to download source code file?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <p class="copyright md">© copyright @ 2022 by <span>Nasr Aldaya</span> | all rights reserved!</p>
+        </div>
+    </footer>
+
+    <!-- ========== JS ========== -->
+    <script src="assets/js/main.js" type="text/javascript"></script>
+</body>
+</html>

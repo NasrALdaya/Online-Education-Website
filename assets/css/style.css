@@ -1,0 +1,752 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --main-clr: #8e44ad;
+  --red-clr: #e74c3c;
+  --orange-clr: #f39c12;
+  --light-clr: #888;
+  --light-bg-clr: #eee;
+  --black-clr: #2c3e50;
+  --white-clr: #fff;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  --border-radius: 0.5rem;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--black-clr);
+  background-color: var(--light-bg-clr);
+  padding-left: 30rem;
+  transition: padding-left 0.3s ease;
+}
+
+body.dark-mode {
+  --light-clr: #aaa;
+  --light-bg-clr: #333;
+  --black-clr: #fff;
+  --white-clr: #222;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+*::selection {
+  background-color: var(--main-clr);
+  color: #fff;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-clr);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-clr);
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  width: 100%;
+  display: block;
+}
+
+/* ========== Sidebar ========== */
+.sidebar {
+  width: 30rem;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--white-clr);
+  border-right: var(--border);
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+body.active .sidebar {
+  left: -100%;
+}
+
+body.active {
+  padding-left: 0;
+}
+
+.sidebar.close {
+  left: -100%;
+}
+
+.profile .avatar {
+  width: 100px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+.profile .name {
+  text-transform: capitalize;
+}
+
+.profile .status {
+  color: var(--light-clr);
+  margin-bottom: 1rem;
+}
+
+.profile .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar .navbar .nav-link {
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--light-clr);
+  transition: var(--transition);
+}
+
+.sidebar .navbar .nav-link i {
+  color: var(--main-clr);
+  margin-right: 0.5rem;
+  transition: var(--transition);
+}
+
+.sidebar .navbar .nav-link:hover {
+  background-color: var(--light-bg-clr);
+}
+
+.sidebar .navbar .nav-link:hover i {
+  margin-right: 2rem;
+}
+
+/* ========== Header ========== */
+.main-header {
+  position: relative;
+  width: 100%;
+  background-color: var(--white-clr);
+  border-bottom: var(--border);
+  height: 8.5rem;
+}
+
+.main-header .container {
+  height: 100%;
+}
+
+.main-header .logo {
+  font-weight: 400;
+}
+
+.main-header .profile {
+  position: absolute;
+  width: 30rem;
+  right: 4rem;
+  bottom: -34rem;
+  background-color: var(--white-clr);
+  border-radius: var(--border-radius);
+  transform-origin: top right;
+  transform: scale(0);
+  transition: var(--transition);
+}
+
+.main-header .profile.active {
+  transform: scale(1);
+}
+
+.main-header .profile .profile-buttons {
+  width: 100%;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.main-header .user-action #search-icon {
+  display: none;
+}
+
+/* ========== Quick Options ========== */
+.quick-options .box .box-title {
+  margin-bottom: 1.5rem;
+}
+
+.quick-options .box .btn {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem 0;
+}
+
+.quick-options .box .btn:last-child {
+  margin: 1.5rem 0 0;
+}
+
+.quick-options .box .categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+.quick-options .box .categories a {
+  padding: 1rem 1.4rem;
+  font-size: 1.5rem;
+  background-color: var(--light-bg-clr);
+  color: var(--light-clr);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.quick-options .box .categories a i {
+  margin-right: 0.5rem;
+  color: var(--black-clr);
+}
+
+.quick-options .box .categories a:hover {
+  background-color: var(--black-clr);
+  color: var(--white-clr);
+}
+
+.quick-options .box .categories a:hover i {
+  color: var(--white-clr);
+}
+
+.quick-options .box p {
+  line-height: 1.9;
+}
+
+/* ========== Our Courses ========== */
+.teacher-info img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.teacher-info {
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.teacher-info .date {
+  color: var(--light-clr);
+}
+
+.thumb-img {
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.thumb-img::before {
+  content: "10 videos";
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--border-radius);
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.our-courses .box .btn {
+  display: block;
+  width: fit-content;
+}
+
+.our-courses .box .course-title {
+  margin-bottom: 1rem;
+}
+
+.our-courses .box-container {
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  margin-bottom: 2rem;
+}
+
+.our-courses .view-all {
+  text-align: center;
+}
+
+/* ========== Footer ========== */
+.main-footer {
+  width: 100%;
+  background-color: var(--white-clr);
+  text-align: center;
+}
+
+.main-footer span {
+  color: var(--main-clr);
+}
+
+/* ==================== About Us Page ==================== */
+/* ========== Why Choose Us? ========== */
+.why-us .description {
+  margin-bottom: 1rem;
+}
+
+.why-us .info .flex {
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.why-us .info .box {
+  padding: 2rem;
+}
+
+.why-us .info .box i {
+  color: var(--main-clr);
+  font-size: 4rem;
+}
+
+.why-us .info .box p {
+  color: var(--light-clr);
+}
+
+.why-us .box-container {
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+/* ========== Student's Reviews ========== */
+.student-reviews .box-container {
+  grid-template-columns: repeat(auto-fit, minmax(27.5rem, 1fr));
+}
+
+.student-reviews .box p {
+  margin-bottom: 1rem;
+}
+
+.student-reviews .box > .flex {
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.student-reviews .box .student-info img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.student-reviews .box .name-rate .name {
+  margin-bottom: 0.5rem;
+}
+
+.student-reviews .box .name-rate .rate {
+  color: var(--orange-clr);
+}
+
+/* ==================== Teachers Page ==================== */
+.teachers .box:first-child {
+  text-align: center;
+}
+
+.teachers .box .box-title {
+  margin-bottom: 1rem;
+}
+
+.teachers .teacher-info {
+  gap: 2rem;
+}
+
+.teachers .teacher-info .date {
+  font-size: 1.5rem;
+}
+
+.teachers .box .btn {
+  margin-top: 1.5rem;
+}
+
+.teachers .stats {
+  margin-bottom: 1rem;
+}
+
+.teachers .box-container {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+/* ==================== Contact Page ==================== */
+.contact .box i {
+  color: var(--main-clr);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.contact .box .links {
+  margin-top: 1rem;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.contact .box .links a {
+  font-size: 1.6rem;
+  color: var(--light-clr);
+}
+
+.contact .box .links a:hover {
+  text-decoration: underline;
+  color: var(--black-clr);
+}
+
+.contact .box-container {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+/* ==================== Profile Page ==================== */
+.student-profile .profile-info {
+  width: 100%;
+  background-color: var(--white-clr);
+  border-radius: var(--border-radius);
+}
+
+.student-profile .profile .btn {
+  width: fit-content;
+}
+
+.student-profile .box-container {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.student-profile .box {
+  background-color: var(--light-bg-clr);
+}
+
+.student-profile .box .flex {
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.student-profile .box .icon-box {
+  background-color: var(--black-clr);
+  color: var(--white-clr);
+  cursor: initial;
+}
+
+.student-profile .box .num {
+  color: var(--main-clr);
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.student-profile .box .desc {
+  color: var(--light-clr);
+}
+
+/* ==================== Login Page ==================== */
+.login-form .form {
+  grid-column: 4 / span 6;
+  margin: 5rem 0;
+}
+
+/* ==================== Teacher Page ==================== */
+.teacher-profile .box-container {
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.teacher-profile .profile-info {
+  background-color: var(--white-clr);
+  border-radius: var(--border-radius);
+}
+
+.teacher-profile .box {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: var(--light-bg-clr);
+}
+
+/* ==================== Playlist Page ==================== */
+.playlist-details .teacher-info img {
+  width: 6rem;
+}
+
+.playlist-details .teacher-info {
+  gap: 2rem;
+}
+
+.playlist-details .text-group h2 {
+  margin-bottom: 1rem;
+}
+
+.playlist-details .text-group .paragraph {
+  margin-bottom: 1rem;
+}
+
+.playlist-details .details {
+  background-color: var(--white-clr);
+  border-radius: var(--border-radius);
+}
+
+.playlist-details .details {
+  grid-gap: 2rem;
+}
+
+.playlist-details .details .grid-image {
+  grid-column: 1 / 7;
+}
+
+.playlist-details .details .grid-text {
+  grid-column: 7 / 12;
+}
+
+.playlist-details .details .bookmark {
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--light-bg-clr);
+  width: fit-content;
+  color: var(--light-clr);
+  margin-bottom: 1.5rem;
+}
+
+.playlist-details .details .bookmark i {
+  color: var(--black-clr);
+  margin-right: 0.5rem;
+}
+
+.playlist-details .details img {
+  margin-bottom: 0;
+}
+
+.playlist-videos .box-container {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.playlist-videos .box img {
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+}
+
+.playlist-videos .box .image {
+  position: relative;
+}
+
+.playlist-videos .box .image .video-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.playlist-videos .box .image .video-overlay i {
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.playlist-videos .box:hover h3 {
+  color: var(--main-clr);
+}
+
+.playlist-videos .box:hover .video-overlay {
+  display: block;
+}
+
+/* ==================== Watch Video Page ==================== */
+.watch-video .row {
+  grid-template-columns: 1fr;
+}
+
+.watch-video .video-box {
+  background-color: var(--white-clr);
+  border-radius: var(--border-radius);
+}
+
+.watch-video video {
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+}
+
+.watch-video .video-title {
+  margin-bottom: 2rem;
+}
+
+.watch-video .video-info {
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.watch-video .video-info {
+  color: var(--light-clr);
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  border-bottom: var(--border);
+  padding-bottom: 1rem;
+}
+.watch-video .video-info i {
+  color: var(--main-clr);
+  margin-right: 0.5rem;
+}
+
+.watch-video .buttons {
+  margin-bottom: 2rem;
+}
+
+.watch-video .buttons .likes {
+  background-color: var(--light-bg-clr);
+  color: var(--light-clr);
+  padding: 1rem 2rem;
+}
+
+.watch-video .buttons .likes i {
+  margin-right: 0.5rem;
+  color: var(--black-clr);
+}
+
+.watch-video .buttons .likes:hover {
+  background-color: var(--black-clr);
+  color: var(--white-clr);
+}
+
+.watch-video .buttons .likes:hover i {
+  color: var(--white-clr);
+}
+
+/* ========== Add Comment ========== */
+.add-comment .message {
+  border: var(--border);
+}
+
+.add-comment .form {
+  text-align: left;
+}
+
+/* ========== User Comments ========== */
+.user-comment .comments-container {
+  background-color: var(--white-clr);
+  border-radius: var(--border-radius);
+}
+
+.user-comment .box {
+  background: none;
+}
+
+.user-comment .box:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.user-comment .comment-content {
+  position: relative;
+  background-color: var(--light-bg-clr);
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+}
+
+.user-comment .comment-content::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: 1.5rem;
+  border-width: 1rem;
+  border-color: transparent transparent var(--light-bg-clr) transparent;
+  border-style: solid;
+}
+
+.user-comment .buttons {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 1200px) {
+  body {
+    padding-left: 0;
+  }
+
+  body.active .sidebar {
+    left: 0;
+  }
+
+  body.active .overlay {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .sidebar {
+    left: -100%;
+  }
+
+  .sidebar .profile {
+    padding-top: 6rem;
+  }
+
+  .btn-close {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header .search-box {
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    background-color: var(--white-clr);
+    border: var(--border);
+    width: 100%;
+    height: 7rem;
+    border-radius: initial;
+    padding: 0 2rem;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: var(--transition);
+  }
+
+  .main-header .search-box.active {
+    transform: scaleY(1);
+  }
+
+  .main-header .user-action #search-icon {
+    display: block;
+  }
+
+  .login-form .form {
+    grid-column: 1 / -1;
+  }
+
+  .playlist-details .details .grid-image {
+    grid-column: 1;
+  }
+
+  .playlist-details .details .grid-text {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .quick-options .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .user-comment .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
